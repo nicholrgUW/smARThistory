@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/fragment_background"
+              android:orientation="vertical"
+    >
+    <!--    android:weightSum="1"    -->
+
+
+    <include layout="@layout/excerpt_info"
+             android:layout_alignParentLeft="true"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentTop="true"
+             android:layout_margin="12dp"/>
+
+    <ImageView
+        android:id="@+id/image_card"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/card_number"
+        android:padding="6dp"
+        android:fontFamily="sans-serif-light"
+        android:layout_alignParentBottom="true"
+        android:textStyle="italic"
+        android:layout_alignParentEnd="true" />
+    <!--android:layout_weight="0.91" -->
+</RelativeLayout>

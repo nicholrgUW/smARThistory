@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.kell.android.smarthistory.CardListFragment">
+
+    <ListView
+        android:id="@+id/card_list"
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        tools:listitem="@android:layout/simple_expandable_list_item_1"
+        android:layout_alignParentBottom="true">
+    </ListView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="#ffffff"
+        android:layout_margin="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+
+
+</RelativeLayout>

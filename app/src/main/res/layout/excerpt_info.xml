@@ -1,0 +1,51 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+
+    >
+
+    <!-- Dummy content.
+    <TextView style="?android:textAppearanceMedium"
+              android:lineSpacingMultiplier="1.2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="@string/lorem_ipsum"
+              android:textIsSelectable="true"
+              android:padding="16dp" />
+-->
+    <TextView
+        android:id="@+id/title_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="Title"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/artist_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="Artist"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/year_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="Year"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/facts_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="Facts"
+        android:textSize="24sp" />
+</LinearLayout>
