@@ -5,6 +5,8 @@ import java.util.List;
 
 /**
  * Created by Robbie on 10/27/2015.
+ *
+ * Model for ArtCard and CardInfo.
  */
 public class ArtCard {
     /**
@@ -98,7 +100,7 @@ public class ArtCard {
 
         @Override
         public String toString() {
-            return "Title: " + title + " Artist: " + artist;
+            return "Title: " + title + "\n  Artist: " + artist;
         }
     }
 }

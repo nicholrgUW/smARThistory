@@ -1,6 +1,5 @@
 package com.kell.android.smarthistory;
 
-import android.support.design.widget.FloatingActionButton;
 import android.test.ActivityInstrumentationTestCase2;
 
 import com.kell.android.smarthistory.model.CardList;
@@ -9,7 +8,7 @@ import com.robotium.solo.Solo;
 import java.util.Random;
 
 /**
- * Created by Kell on 12/6/2015.
+ * Created by Robbie on 12/6/2015.
  */
 public class SelectListFragmentTest extends ActivityInstrumentationTestCase2<MainActivity> {
     private Solo solo;
@@ -38,7 +37,7 @@ public class SelectListFragmentTest extends ActivityInstrumentationTestCase2<Mai
     }
 
     public void testAddList() {
-        solo.clickOnView((FloatingActionButton) solo.getView(R.id.add_list_button));
+        solo.clickOnView(solo.getView(R.id.add_list_button));
         Random random = new Random();
         int randomNum = random.nextInt(10000);
         solo.enterText(0, "list " + randomNum);

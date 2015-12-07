@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Robbie on 12/2/2015.
+ * This fragment creates a flippable stack of CardFragments to display all the cards in a selected list.
  */
 public class CardFlipperFragment extends Fragment {
     private List<Fragment> mViewPagerFragments;

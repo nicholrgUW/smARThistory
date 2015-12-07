@@ -27,6 +27,12 @@ public class MainActivity extends AppCompatActivity implements UserLoginFragment
         mCurrentCard = currentCard;
     }
 
+    /**
+     * hideKeyboard
+     *
+     * Hides the soft keyboard.
+     * @param context The Context
+     */
     public static void hideKeyboard(Context context) {
         InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
         View v = ((Activity) context).getCurrentFocus();
@@ -35,6 +41,14 @@ public class MainActivity extends AppCompatActivity implements UserLoginFragment
         inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
 
+    /**
+     * onStart.
+     *
+     * Either starts UserLoginFragment or SelectListFragment depending on if a user is still logged
+     * in.
+     *
+     * @param savedInstanceState The saved state bundle.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

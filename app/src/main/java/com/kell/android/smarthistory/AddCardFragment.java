@@ -227,6 +227,7 @@ public class
                     String reason = jsonObject.getString("error");
                     Log.d(TAG, "Card insert failure " + reason);
                 }
+                MainActivity.hideKeyboard(getContext());
                 getFragmentManager().popBackStackImmediate();
             } catch (Exception e) {
                 Log.d(TAG, "Parsing JSON Exception " + e.getMessage());

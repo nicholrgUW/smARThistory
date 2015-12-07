@@ -9,19 +9,13 @@ import com.kell.android.smarthistory.model.ArtCard;
 
 import junit.framework.TestCase;
 
-
-/**
- * Created by Kell on 12/6/2015.
- */
-
-
 public class CardTest extends TestCase {
-    String mTitle;
-    String mArtist;
-    String mYear;
-    String mInfo;
-    String mUrl;
-    ArtCard.CardInfo mCard;
+    private String mTitle;
+    private String mArtist;
+    private String mYear;
+    private String mInfo;
+    private String mUrl;
+    private ArtCard.CardInfo mCard;
 
     public void setUp() {
         mTitle = "test";

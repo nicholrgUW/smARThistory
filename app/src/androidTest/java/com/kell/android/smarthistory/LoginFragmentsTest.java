@@ -1,14 +1,13 @@
 package com.kell.android.smarthistory;
 
 import android.test.ActivityInstrumentationTestCase2;
-import android.widget.TextView;
 
 import com.robotium.solo.Solo;
 
 import java.util.Random;
 
 /**
- * Created by Kell on 12/6/2015.
+ * Created by Robbie on 12/6/2015.
  */
 public class LoginFragmentsTest extends ActivityInstrumentationTestCase2<MainActivity> {
     private Solo solo;
@@ -43,7 +42,7 @@ public class LoginFragmentsTest extends ActivityInstrumentationTestCase2<MainAct
     }
 
     public void testAddUserFragment() {
-        solo.clickOnView((TextView) solo.getView(R.id.new_user_button));
+        solo.clickOnView(solo.getView(R.id.new_user_button));
         Random random = new Random();
         int number = random.nextInt(10000);
         solo.enterText(0, "test@test" + number + ".org");
@@ -57,7 +56,7 @@ public class LoginFragmentsTest extends ActivityInstrumentationTestCase2<MainAct
     }
 
     public void testAddDuplicateUserFragment() {
-        solo.clickOnView((TextView) solo.getView(R.id.new_user_button));
+        solo.clickOnView(solo.getView(R.id.new_user_button));
         solo.enterText(0, "test@test.com");
         solo.enterText(1, "qwerty");
         solo.enterText(2, "qwerty");
