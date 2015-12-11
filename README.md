@@ -20,3 +20,5 @@ a lit bit if the images are being retrieved for the the first time. Like Single 
  a Card, it will change its view. To move between the Cards swipe up or down.
 
 To logout, click the vertical ellipsis options, then click Logout. 
+
+I've used <a href="https://github.com/blipinsk/FlippableStackView">Bartosz Lipiński's FlippableStackView</a> for the flippable fragment stack.
