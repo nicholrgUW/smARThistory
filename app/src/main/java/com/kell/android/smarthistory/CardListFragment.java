@@ -65,6 +65,7 @@ public class CardListFragment extends Fragment {
     public void onStart() {
         super.onStart();
         SharedPreferences mSharedPreferences = getActivity().getSharedPreferences(getString(R.string.SHARED_PREFS), Context.MODE_PRIVATE);
+        ((MainActivity) getActivity()).showActionBar();
 
         ConnectivityManager connMgr = (ConnectivityManager)
                 getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);

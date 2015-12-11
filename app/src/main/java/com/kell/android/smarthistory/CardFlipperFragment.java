@@ -33,6 +33,7 @@ public class CardFlipperFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        ((MainActivity) getActivity()).showActionBar();
 
         createCardFragments();
 

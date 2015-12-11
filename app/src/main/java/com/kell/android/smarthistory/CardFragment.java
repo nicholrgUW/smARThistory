@@ -72,6 +72,7 @@ public class CardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_card, container, false);
+        ((MainActivity) getActivity()).showActionBar();
 
         Bundle bdl = getArguments();
         if (bdl != null) {

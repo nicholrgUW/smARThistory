@@ -22,6 +22,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
+
 
 import com.kell.android.smarthistory.data.CardInfoDB;
 import com.kell.android.smarthistory.model.CardList;
@@ -68,6 +70,7 @@ public class SelectListFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        ((MainActivity) getActivity()).showActionBar();
         mSharedPreferences = getActivity().getSharedPreferences(
                 getString(R.string.SHARED_PREFS), Context.MODE_PRIVATE);
         mUser = mSharedPreferences.getString("user", "");

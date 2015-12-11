@@ -74,6 +74,7 @@ public class AddUserFragment extends Fragment {
                 }
             }
         });
+
         return v;
     }
 

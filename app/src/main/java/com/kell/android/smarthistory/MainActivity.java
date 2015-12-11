@@ -71,7 +71,21 @@ public class MainActivity extends AppCompatActivity implements UserLoginFragment
                 fragmentTransaction.add(R.id.fragment_container, selectListFragment).commit();
             }
         }
+        getSupportActionBar().hide();
+    }
 
+    @Override
+    protected void onStart(){
+        super.onStart();
+        getSupportActionBar().hide();
+    }
+
+    public void showActionBar(){
+        getSupportActionBar().show();
+    }
+
+    public void hideActionBar(){
+        getSupportActionBar().hide();
     }
 
     /**

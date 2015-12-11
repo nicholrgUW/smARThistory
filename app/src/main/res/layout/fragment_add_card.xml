@@ -5,7 +5,6 @@
     tools:context="com.kell.android.myappphase1.AddCardFragment">
 
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,70 +16,104 @@
             android:padding="12dp"
             android:weightSum="1">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="All fields are required"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:text="All fields are required" />
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_title"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <EditText
+                    android:id="@+id/title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+
+                    android:hint="@string/title_edit_text"
+                    android:inputType="text"
+                    android:maxLength="60" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_artist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
             <EditText
-                android:id="@+id/title_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
+                    android:id="@+id/artist_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/title_text"
+                    android:hint="@string/artist_edit_text"
+                    android:inputType="textPersonName"
+                    android:maxLength="60" />
+            </android.support.design.widget.TextInputLayout>
 
-                android:hint="@string/title_edit_text"
-                android:maxLength="60"
-                android:inputType="text"/>
-
-            <EditText
-                android:id="@+id/artist_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/title_text"
-                android:hint="@string/artist_edit_text"
-                android:maxLength="60"
-                android:inputType="textPersonName"/>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_year"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
             <EditText
-                android:id="@+id/year_text"
-                android:layout_width="360dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/artist_text"
-                android:hint="@string/year_edit_text"
-                android:maxLength="30"
-                android:inputType="number"/>
+                    android:id="@+id/year_text"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/artist_text"
+                    android:hint="@string/year_edit_text"
+                    android:inputType="text"
+                android:maxLength="30" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
             <EditText
-                android:id="@+id/info_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/year_text"
-                android:hint="@string/info_edit_text"
-                android:lines="4"
-                android:maxLength="200"
-                android:minLines="2"
-                android:inputType="textMultiLine"/>
+                    android:id="@+id/info_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/year_text"
+                    android:hint="@string/info_edit_text"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:maxLength="200"
+                    android:minLines="2" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_url"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
             <EditText
-                android:id="@+id/url_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/info_text"
-                android:hint="@string/url_edit_text"
-                android:inputType="textUri"
-                android:maxLength="200"
-                android:minLines="2" />
+                    android:id="@+id/url_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/info_text"
+                    android:hint="@string/url_edit_text"
+                    android:inputType="textUri"
+                    android:maxLength="200"
+                    android:minLines="2" />
+
+            </android.support.design.widget.TextInputLayout>
+
         </LinearLayout>
     </ScrollView>
 

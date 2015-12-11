@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">smARThistory</string>
 
-    <string name="email_hint">Enter your email address</string>
-    <string name="pwd_hint">Enter your password</string>
+    <string name="email_hint">Email</string>
+    <string name="pwd_hint">Password</string>
     <string name="btn_adduser">Add User</string>
     <string name="SHARED_PREFS">"com.kell.android.smARThistory.PREFS</string>
     <string name="LOGGEDIN">loggedin</string>

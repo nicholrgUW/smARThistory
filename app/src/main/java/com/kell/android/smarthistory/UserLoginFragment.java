@@ -1,5 +1,6 @@
 package com.kell.android.smarthistory;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
@@ -38,12 +39,16 @@ public class UserLoginFragment extends Fragment {
     public UserLoginFragment() {
     }
 
+
+
     /**
      * onStart. Calls super.onStart() and checks for web connectivity.
      */
     @Override
     public void onStart() {
         super.onStart();
+        ((MainActivity) getActivity()).hideActionBar();
+
         mIsConnected = false;
         ConnectivityManager connMgr = (ConnectivityManager)
                 getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -76,12 +81,14 @@ public class UserLoginFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (mIsConnected) {
-                    if (mEmailText.getText().length() != 0 && mPwdText.getText().length() != 0) {
+                    String email = mEmailText.getText().toString();
+                    if (email.length() != 0 && mPwdText.getText().length() != 0 && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                         String urlWArgs = url + "?email=" + mEmailText.getText().toString()
                                 + "&password=" + mPwdText.getText().toString();
                         MainActivity.hideKeyboard(getContext());
                         new LoginUserWebTask().execute(urlWArgs);
-                    } else {
+                    } else if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                        mEmailText.setError("enter valid email");
                         Toast.makeText(getActivity(), "Enter your email and " +
                                 "password or register", Toast.LENGTH_SHORT).show();
                     }
